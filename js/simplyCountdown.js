@@ -195,9 +195,17 @@
 
                 now = new Date();
                 if (parameters.enableUtc) {
+                  //Daniel
+                  targetDate.setFullYear(2020);
+                  targetDate.setMonth(11); //Diciembre
+                  targetDate.setDate(5);
+                  targetDate.setHours(21);
+
                     nowUtc = new Date(now.getFullYear(), now.getMonth(), now.getDate(),
                         now.getHours(), now.getMinutes(), now.getSeconds());
                     secondsLeft = (targetDate - nowUtc.getTime()) / 1000;
+                    console.log(now.getHours())
+                    console.log(targetDate)
                 } else {
                     secondsLeft = (targetDate - now.getTime()) / 1000;
                 }
