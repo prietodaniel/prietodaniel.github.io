@@ -153,6 +153,10 @@
             seconds,
             cd = document.querySelectorAll(elt);
 
+        parameters.year = 2020;
+        parameters.month = 12;
+        parameters.day = 5;
+
         targetTmpDate = new Date(
             parameters.year,
             parameters.month - 1,
@@ -161,6 +165,8 @@
             parameters.minutes,
             parameters.seconds
         );
+
+        console.log(targetTmpDate);
 
         if (parameters.enableUtc) {
             targetDate = new Date(
@@ -171,8 +177,9 @@
                 targetTmpDate.getUTCMinutes(),
                 targetTmpDate.getUTCSeconds()
             );
+
         } else {
-            targetDate = targetTmpDate;
+            targetDate = targetDate;
         }
 
         Array.prototype.forEach.call(cd, function (countdown) {
@@ -190,7 +197,6 @@
                     nowUtc = new Date(now.getFullYear(), now.getMonth(), now.getDate(),
                         now.getHours(), now.getMinutes(), now.getSeconds());
                     secondsLeft = (targetDate - nowUtc.getTime()) / 1000;
-
                 } else {
                     secondsLeft = (targetDate - now.getTime()) / 1000;
                 }
@@ -258,6 +264,8 @@
                     fullCountDown.seconds.amount.textContent = (parameters.zeroPad && seconds.toString().length < 2 ? '0' : '') + seconds;
                     fullCountDown.seconds.word.textContent = secondWord;
                 }
+                //console.log(days);
+
             };
 
             // Refresh immediately to prevent a Flash of Unstyled Content
