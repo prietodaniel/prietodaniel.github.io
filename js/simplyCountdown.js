@@ -156,6 +156,7 @@
         parameters.year = 2020;
         parameters.month = 12;
         parameters.day = 5;
+        parameters.hours = 21;
 
         targetTmpDate = new Date(
             parameters.year,
