@@ -1096,8 +1096,8 @@ header .row {
 header .top-bar {
 	display: block;
 	background: #000000;
-	min-width: 220px;
-	min-height: 66px;
+	min-width: 130px;
+	min-height: 50px;
 	position: absolute;
 	left: 90px;
 	top: 0;
@@ -1147,7 +1147,7 @@ header .logo a {
 	color: transparent;
 	position: absolute;
 	right: 8px;
-	top: 50%;
+	top: 34%;
 	bottom: auto;
 	left: auto;
 	-moz-transition: background 0.2s ease-in-out;
